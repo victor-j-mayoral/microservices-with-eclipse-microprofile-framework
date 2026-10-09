@@ -1,0 +1,11 @@
+io\microprofile\tutorial\store\order\entity\OrderStatus.class
+io\microprofile\tutorial\store\order\resource\OrderItemResource.class
+io\microprofile\tutorial\store\order\entity\Order$OrderBuilder.class
+io\microprofile\tutorial\store\order\resource\OrderResource.class
+io\microprofile\tutorial\store\order\entity\Order.class
+io\microprofile\tutorial\store\order\repository\OrderItemRepository.class
+io\microprofile\tutorial\store\order\entity\OrderItem$OrderItemBuilder.class
+io\microprofile\tutorial\store\order\repository\OrderRepository.class
+io\microprofile\tutorial\store\order\OrderApplication.class
+io\microprofile\tutorial\store\order\service\OrderService.class
+io\microprofile\tutorial\store\order\entity\OrderItem.class
