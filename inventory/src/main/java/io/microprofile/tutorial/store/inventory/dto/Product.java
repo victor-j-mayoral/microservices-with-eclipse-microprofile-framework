@@ -3,9 +3,11 @@ package io.microprofile.tutorial.store.inventory.dto;
 import jakarta.json.bind.annotation.JsonbCreator;
 import jakarta.json.bind.annotation.JsonbProperty;
 import jakarta.json.bind.annotation.JsonbTransient;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+
 
 /**
  * Product DTO for the inventory service.
@@ -47,6 +49,7 @@ public class Product {
     @JsonbTransient
     private boolean isAvailable = true;
 
+    
     @JsonbCreator
     public Product(
             @JsonbProperty("id") Long id, 
