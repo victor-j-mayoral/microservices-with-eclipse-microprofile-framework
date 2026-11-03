@@ -4,7 +4,7 @@
 echo "Building and starting Shipment Service..."
 
 # Stop running server if already running
-if [ -f target/liberty/wlp/usr/servers/shipmentServer/workarea/.sRunning ]; then
+if [ -f target/liberty/wlp/usr/servers/defaultServer/workarea/.sRunning ]; then
     mvn liberty:stop
 fi
 

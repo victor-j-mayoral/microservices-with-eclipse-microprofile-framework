@@ -5,7 +5,6 @@ import io.microprofile.tutorial.store.shipment.entity.ShipmentStatus;
 import io.microprofile.tutorial.store.shipment.service.ShipmentService;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;

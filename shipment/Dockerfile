@@ -12,13 +12,15 @@ COPY --chown=1001:0 *.sh /opt/ol/helpers/
 # Environment variables
 ENV VERBOSE=true
 
+USER root
+
 # This is important - adds the management of vulnerability databases to allow Docker scanning
 RUN dnf install -y shadow-utils
 
 # Set environment variable for MP config profile
 ENV MP_CONFIG_PROFILE=docker
 
-EXPOSE 8060 9060
+EXPOSE 8060 8061
 
 # Run as non-root user for security
 USER 1001

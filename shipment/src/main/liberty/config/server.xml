@@ -11,7 +11,7 @@
         <feature>microProfile-6.1</feature>
     </featureManager>
 
-    <httpEndpoint httpPort="6040" httpsPort="6041"
+    <httpEndpoint httpPort="8060" httpsPort="8061"
                   id="defaultHttpEndpoint" host="*" />
 
     <webApplication location="shipment.war" contextRoot="/shipment"/>
