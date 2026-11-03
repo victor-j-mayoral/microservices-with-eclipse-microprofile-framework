@@ -92,7 +92,7 @@ public class ProductResource {
     @Operation(summary = "Get product by ID", description = "Returns a product by its ID")
     @APIResponses({
         @APIResponse(responseCode = "200", description = "Product found", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Product.class))),
-        @APIResponse(responseCode = "404", description = "Product not found"),
+        @APIResponse(responseCode = "404", description = "Product not found", content = @Content(mediaType = "application/json")),
         @APIResponse(responseCode = "503", description = "Service is under maintenance")
     })
     public Response getProductById(@PathParam("id") Long id) {
@@ -109,7 +109,8 @@ public class ProductResource {
         if (product != null) {
             return Response.ok(product).build();
         } else {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.NOT_FOUND)
+            		.entity("This product not found").build();
         }
     }
 
@@ -133,7 +134,7 @@ public class ProductResource {
     @Operation(summary = "Update a product", description = "Updates an existing product by its ID")
     @APIResponses({
         @APIResponse(responseCode = "200", description = "Product updated", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Product.class))),
-        @APIResponse(responseCode = "404", description = "Product not found")
+        @APIResponse(responseCode = "404", description = "Product to be updated not found")
     })
     public Response updateProduct(@PathParam("id") Long id, Product updatedProduct) {
         LOGGER.info("REST: Updating product with id: " + id);
@@ -141,7 +142,8 @@ public class ProductResource {
         if (updated != null) {
             return Response.ok(updated).build();
         } else {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.NOT_FOUND)
+            		.entity("This product to be updated not found").build();
         }
     }
 
@@ -151,7 +153,7 @@ public class ProductResource {
     @Operation(summary = "Delete a product", description = "Deletes a product by its ID")
     @APIResponses({
         @APIResponse(responseCode = "204", description = "Product deleted"),
-        @APIResponse(responseCode = "404", description = "Product not found")
+        @APIResponse(responseCode = "404", description = "Product to be deleted not found")
     })
     public Response deleteProduct(@PathParam("id") Long id) {
         LOGGER.info("REST: Deleting product with id: " + id);
@@ -159,7 +161,8 @@ public class ProductResource {
         if (deleted) {
             return Response.noContent().build();
         } else {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.NOT_FOUND)
+            		.entity("This product to be deleted not found").build();
         }
     }
     
