@@ -1,16 +1,14 @@
 package io.microprofile.tutorial.store.order.service;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
+
 import io.microprofile.tutorial.store.order.entity.Order;
 import io.microprofile.tutorial.store.order.entity.OrderItem;
 import io.microprofile.tutorial.store.order.entity.OrderStatus;
 import io.microprofile.tutorial.store.order.repository.OrderItemRepository;
 import io.microprofile.tutorial.store.order.repository.OrderRepository;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Optional;
-
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
