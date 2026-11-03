@@ -18,6 +18,6 @@ docker build -t shoppingcart-service .
 
 # Run the Docker container
 echo "Starting Docker container..."
-docker run -d --name shoppingcart-service -p 4050:4050 shoppingcart-service
+docker run -d --name shoppingcart-service -p 4050:4050 -p 4051:4051 shoppingcart-service
 
 echo "Shopping Cart service is running on http://localhost:4050/shoppingcart"

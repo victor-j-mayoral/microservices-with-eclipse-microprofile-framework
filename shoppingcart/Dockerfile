@@ -10,7 +10,7 @@ COPY --chown=1001:0 target/shoppingcart.war /config/apps/
 RUN configure.sh
 
 # Expose the default port
-EXPOSE 4050 4443
+EXPOSE 4050 4051
 
 # Set the health check
 HEALTHCHECK --start-period=60s --interval=10s --timeout=5s --retries=3 \

@@ -9,7 +9,7 @@
         <feature>microProfile-6.1</feature>
     </featureManager>
 
-    <httpEndpoint httpPort="6030" httpsPort="6031"
+    <httpEndpoint httpPort="4050" httpsPort="4051"
                   id="defaultHttpEndpoint" host="*" />
 
     <webApplication location="shoppingcart.war" contextRoot="/shoppingcart"/>

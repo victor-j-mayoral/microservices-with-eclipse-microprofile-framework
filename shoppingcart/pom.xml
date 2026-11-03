@@ -15,10 +15,19 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
+    
     <jakarta.jakartaee-api.version>10.0.0</jakarta.jakartaee-api.version>
     <microprofile.version>6.1</microprofile.version>
+    
+    <lombok.version>1.18.30</lombok.version>
+    
+    <!-- Liberty configuration -->
     <liberty.version>23.0.0.3</liberty.version>
-    <lombok.version>1.18.24</lombok.version>
+    <liberty.var.default.http.port>4050</liberty.var.default.http.port>
+    <liberty.var.default.https.port>4051</liberty.var.default.https.port>
+    
+    <liberty.var.app.context.root>shoppingcart</liberty.var.app.context.root>    
+    
   </properties>
 
   <dependencies>
@@ -55,11 +64,11 @@
         <artifactId>liberty-maven-plugin</artifactId>
         <version>3.8.2</version>
         <configuration>
-          <serverName>shoppingcartServer</serverName>
+          <serverName>defaultServer</serverName>
           <include>runnable</include>
           <serverStartTimeout>120</serverStartTimeout>
           <bootstrapProperties>
-            <app.context.root>/shoppingcart</app.context.root>
+            <app.context.root>${liberty.var.app.context.root}</app.context.root>
           </bootstrapProperties>
         </configuration>
       </plugin>
