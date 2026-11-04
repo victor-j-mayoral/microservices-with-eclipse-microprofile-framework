@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "8bc6f360-acb0-4664-8153-cfd776ce8a3e",
+    "name": "REST API Catalog microservice operations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "2457443"
+  },
+  "item": [
+    {
+      "name": "Create a new Product of Catalog",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Lenovo Tablet\",\r\n  \"description\": \"10-inch tablet with high resolution display\",\r\n  \"price\": 499.99\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5050/catalog/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "catalog",
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update an existing Product of Catalog",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Dell Tablet\",\r\n  \"description\": \"10-inch tablet with high resolution display\",\r\n  \"price\": 899.99\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5050/catalog/api/products/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "catalog",
+            "api",
+            "products",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtain all Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5050/catalog/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "catalog",
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtain one Product by its id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5050/catalog/api/products/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "catalog",
+            "api",
+            "products",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search one Product by one of its fields",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5050/catalog/api/products/search?maxPrice=1000.00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "catalog",
+            "api",
+            "products",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "maxPrice",
+              "value": "1000.00"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete one Product by its id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5050/catalog/api/products/6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "catalog",
+            "api",
+            "products",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

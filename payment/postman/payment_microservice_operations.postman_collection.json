@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "19bd168f-f0c2-476f-8b57-b9b22674fb86",
+    "name": "REST API Payment microservice operations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "2457443"
+  },
+  "item": [
+    {
+      "name": "Example endpoint demonstrating payment processing with configuration",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cardNumber\": \"4111111111111111\",\r\n    \"cardHolderName\": \"John Doe\",\r\n    \"expiryDate\": \"12/25\",\r\n    \"securityCode\": \"987\",\r\n    \"amount\": 350.00\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9080/payment/api/payment-config/process-example",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9080",
+          "path": [
+            "payment",
+            "api",
+            "payment-config",
+            "process-example"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update a Payment configuration property value",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"key\": \"payment.retry.maxRetries\", \r\n    \"value\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9080/payment/api/payment-config",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9080",
+          "path": [
+            "payment",
+            "api",
+            "payment-config"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Processes a Payment once authorized",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9080/payment/api/authorize?amount=450.00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9080",
+          "path": [
+            "payment",
+            "api",
+            "authorize"
+          ],
+          "query": [
+            {
+              "key": "amount",
+              "value": "450.00"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtain all Payment configuration values",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9080/payment/api/payment-config",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9080",
+          "path": [
+            "payment",
+            "api",
+            "payment-config"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

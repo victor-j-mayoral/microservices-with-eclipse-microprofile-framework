@@ -1,0 +1,232 @@
+{
+  "info": {
+    "_postman_id": "7616fe16-a397-4738-b62d-f8f3d255228c",
+    "name": "REST API Inventory microservice operations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "2457443"
+  },
+  "item": [
+    {
+      "name": "Create a new Inventory for an exisitng Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"productId\": 3,\r\n    \"quantity\": 25\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:6050/inventory/api/inventories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6050",
+          "path": [
+            "inventory",
+            "api",
+            "inventories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update an existing Inventory of a Product",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"productId\": 1,\r\n    \"quantity\": 75,\r\n    \"reservedQuantity\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:6050/inventory/api/inventories/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6050",
+          "path": [
+            "inventory",
+            "api",
+            "inventories",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtain all Inventories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6050/inventory/api/inventories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6050",
+          "path": [
+            "inventory",
+            "api",
+            "inventories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reserve Inventory quantity for a Product",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6050/inventory/api/inventories/product/1/reserve/5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6050",
+          "path": [
+            "inventory",
+            "api",
+            "inventories",
+            "product",
+            "1",
+            "reserve",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Inventory quantity for a Product",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6050/inventory/api/inventories/product/1/quantity/95",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6050",
+          "path": [
+            "inventory",
+            "api",
+            "inventories",
+            "product",
+            "1",
+            "quantity",
+            "95"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtain one Inventory by its id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6050/inventory/api/inventories/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6050",
+          "path": [
+            "inventory",
+            "api",
+            "inventories",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtain Product info by its id on Inventory",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6050/inventory/api/inventories/product-info/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6050",
+          "path": [
+            "inventory",
+            "api",
+            "inventories",
+            "product-info",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtain enriched Inventory info by its id with Product details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6050/inventory/api/inventories/2/with-product-info",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6050",
+          "path": [
+            "inventory",
+            "api",
+            "inventories",
+            "2",
+            "with-product-info"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete one Inventory by its id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6050/inventory/api/inventories/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6050",
+          "path": [
+            "inventory",
+            "api",
+            "inventories",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
